@@ -3,10 +3,10 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HomePageController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Guest\ProjectController as GuestProjectController;
 use App\Http\Controllers\Home\PageController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
