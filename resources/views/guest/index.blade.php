@@ -17,7 +17,7 @@
 
             <div class="right">
 
-                <h2>{{$project->title}}</h2>
+                <h2>{{$project->title}}</h2> <h5>Type: <span class="text-decoration-underline">{{$project->type->name ?? 'nessuna'}}</span></h5>
 
                 <p>{{$project->description}}</p>
 

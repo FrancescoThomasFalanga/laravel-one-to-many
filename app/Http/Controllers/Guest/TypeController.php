@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
-use App\Models\Project;
 use App\Models\Type;
 use Illuminate\Http\Request;
 
-class ProjectController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +15,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
-
         $types = Type::all();
 
-        return view('guest.index', compact('projects', 'types'));
+        return view('admin.types.index', compact('types'));
     }
 
     /**
@@ -30,7 +27,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        // 
+        //
     }
 
     /**
@@ -50,12 +47,9 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
+    public function show(Type $type)
     {
-
-        $types = Type::all();
-
-        return view('guest.show', compact('project', 'types'));
+        return view('admin.types.show', compact('type'));
     }
 
     /**
@@ -64,7 +58,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
+    public function edit(Type $type)
     {
         //
     }
@@ -76,7 +70,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(Request $request, Type $type)
     {
         //
     }
@@ -87,7 +81,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Project $project)
+    public function destroy(Type $type)
     {
         //
     }
