@@ -31,7 +31,10 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+
+        $types = Type::all();
+
+        return view('admin.projects.create', compact('types'));
     }
 
     /**
@@ -42,13 +45,13 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validation($request);
 
         $form_data = $request->all();
 
         $project = new Project();
 
-        
         $project->fill($form_data);
         
         $project->slug = Str::slug($project->title, '-');
@@ -56,7 +59,6 @@ class ProjectController extends Controller
         $project->save();
 
         return redirect()->route('admin.projects.show', $project->slug);
-
 
     }
 
@@ -80,7 +82,10 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+
+        $types = Type::all();
+
+        return view('admin.projects.edit', compact('project', 'types'));
     }
 
     /**
