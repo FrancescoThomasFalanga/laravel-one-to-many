@@ -133,12 +133,14 @@ class ProjectController extends Controller
             'title' => 'required|max:100',
             'description' => 'required|max:300',
             'url_img' => 'required',
+            'type_id' => 'nullable|exists:types,id',
         ], [
             'title.required' => 'Il campo è obbligatorio',
             'title.max' => 'Puoi inserire al massimo 100 Caratteri',
             'description.required' => 'Il campo è obbligatorio',
             'description.max' => 'Puoi inserire al massimo 300 Caratteri',
             'url_img.required' => 'Il campo è obbligatorio',
+            'type_id.exists' => 'La categoria deve essere presente nel nostro sito',
         ])->validate();
 
         return $validator;
