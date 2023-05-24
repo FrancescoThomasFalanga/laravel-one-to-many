@@ -114,43 +114,62 @@
 
         <div id="admin-layout">
 
-            <aside id="admin-sidebar">
-    
-                <div class="d-flex gap-3 me-3 mt-5 flex-column p-4 border-end dashboard-sidebar">
-            
-                    <div class="card">
-                        <div class="card-header">
-                            Dashboard
-                        </div>
-                        <div class="list-group list-group-flush">
-                            <a href="{{route('admin.dashboard')}}" class="list-group-item list-group-item-action">Home</a>
-                            <a href="{{url('profile')}}" class="list-group-item list-group-item-action">Profile</a>
-                        </div>
-                    </div>
-            
-                    <div class="card">
-                        <div class="card-header">
-                            Projects
-                        </div>
-                        <div class="list-group list-group-flush">
-                            <a href="{{route('admin.projects.index')}}" class="list-group-item list-group-item-action">All Projects</a>
-                            <a href="{{route('admin.projects.create')}}" class="list-group-item list-group-item-action">Add Projects</a>
-                        </div>
-                    </div>
-            
-                    <div class="card">
-                        <div class="card-header">
-                            Categories
-                        </div>
-                        <div class="list-group list-group-flush">
-                            <a href="{{route('admin.types.index')}}" class="list-group-item list-group-item-action">All Types</a>
-                            <a href="{{route('admin.types.create')}}" class="list-group-item list-group-item-action">Add Type</a>
-                        </div>
-                    </div>
-            
-                </div>
-            
-            </aside>
+            <div class="area"></div><div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="{{route('admin.dashboard')}}" class="{{str_contains( Route::currentRouteName(), 'admin.dashboard') ? 'active-dashboard' : ''}}">
+                            <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text">
+                               Dashboard
+                            </span>
+                        </a>
+                      
+                    </li>
+                    <li class="has-subnav">
+                        <a href="{{url('profile')}}" class="{{str_contains( Route::currentRouteName(), 'profile') ? 'active-dashboard' : ''}}">
+                            <i class="fa fa-user fa-2x"></i>
+                            <span class="nav-text">
+                                Profile
+                            </span>
+                        </a>
+                        
+                    </li>
+                    <li class="has-subnav">
+                        <a href="{{route('admin.projects.index')}}" class="{{str_contains( Route::currentRouteName(), 'admin.projects.index') ? 'active-dashboard' : ''}}">
+                           <i class="fa fa-diagram-project fa-2x"></i>
+                            <span class="nav-text">
+                                All Projects
+                            </span>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="{{route('admin.types.index')}}" class="{{str_contains( Route::currentRouteName(), 'admin.types.index') ? 'active-dashboard' : ''}}">
+                            <i class="fa fa-hashtag fa-2x"></i>
+                            <span class="nav-text">
+                                All Types
+                            </span>
+                        </a>
+                    </li>
+                    <li class="has-subnav">
+                        <a href="{{route('admin.projects.create')}}" class="{{str_contains( Route::currentRouteName(), 'admin.projects.create') ? 'active-dashboard' : ''}}">
+                           <i class="fa fa-plus fa-2x"></i>
+                            <span class="nav-text">
+                                Add Project
+                            </span>
+                        </a>
+                       
+                    </li>
+                    <li>
+                        <a href="{{route('admin.types.create')}}" class="{{str_contains( Route::currentRouteName(), 'admin.types.create') ? 'active-dashboard' : ''}}">
+                            <i class="fa fa-plus fa-2x"></i>
+                            <span class="nav-text">
+                               Add Type
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
             
             <main class="">
@@ -160,7 +179,7 @@
         </div>
 
 
-        <footer>
+        <footer class="fixed-bottom">
 
             <div class="copyright">
 

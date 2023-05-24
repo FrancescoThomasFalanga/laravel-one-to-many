@@ -2,11 +2,12 @@
 
 @section('content')
 
-    <div class="go-back-btn text-center">
+    <div class="go-back-btn text-center d-flex justify-content-center align-items-center gap-4" style="margin-top: 100px">
 
-        <button class="button">
-            <a href="{{route('admin.projects.index')}}">Go Back</a>
-        </button>
+        <h2 class="mb-0 green text-uppercase">Add Project</h2>
+
+        <a href="{{route('admin.projects.index')}}" class="btn-custom">Go Back <span></span></a>
+
 
     </div>
 

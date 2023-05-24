@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <div class="go-back-btn text-center d-flex justify-content-center align-items-center gap-4 mt-5">
+    <div class="go-back-btn text-center d-flex justify-content-center align-items-center gap-4" style="margin-top:100px">
         
-        <h1 class="mb-0 green text-uppercase">Add Type</h1>
+        <h2 class="mb-0 green text-uppercase">Add Type</h2>
 
 
-        <a href="{{route('admin.types.index')}}" class="btn-custom">Go Back</a>
+        <a href="{{route('admin.types.index')}}" class="btn-custom">Go Back <span></span></a>
 
     </div>
 

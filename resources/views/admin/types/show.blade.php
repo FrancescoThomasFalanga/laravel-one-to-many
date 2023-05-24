@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <div class="container py-3">
+    <div class="container py-3 d-flex mt-5 justify-content-start">
 
-        <div class="single-type d-flex align-items-center gap-4 justify-content-center mb-5">
+        <div class="single-type d-flex gap-4  mb-5 mt-5">
 
             <h1 class="mb-0">Selected Type</h1>
 
@@ -36,7 +36,7 @@
 
         <div class="d-flex gap-4 mt-5">
 
-            <button class="button">
+            <button class="button" style="margin: 0">
                 <a href="{{route('admin.types.edit', $type->slug)}}">Edit</a>
             </button>
 
